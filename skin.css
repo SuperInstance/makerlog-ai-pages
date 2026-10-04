@@ -1,0 +1,42 @@
+/* makerlog.ai — terminal-inflected: near-black, phosphor green,
+ * monospace everything. Build in the open. */
+.le-root {
+  --le-bg: #0a0c0a;
+  --le-ink: #c9d4c9;
+  --le-muted: #6f7f6f;
+  --le-accent: #46e07a;
+  --le-card: #0e120e;
+  --le-line: #1d2b1d;
+  --le-go: #46e07a;
+  --le-hold: #d8c84a;
+  --le-nogo: #e05a4a;
+  --le-font: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --le-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+}
+body { margin: 0; background: #0a0c0a; }
+
+.le-wordmark { font-weight: 700; letter-spacing: 0; }
+.le-wordmark::before { content: ">_ "; color: var(--le-accent); }
+.le-tagline { color: var(--le-muted); }
+.le-label { color: var(--le-muted); }
+.le-btn, .le-input, .le-row, .le-verdict, .le-logitem { border-radius: 0; }
+.le-btn { background: var(--le-accent); color: #061006; }
+.le-btn:hover:not(:disabled) { filter: brightness(1.1); }
+.le-input { background: #0a0c0a; border: 1px solid var(--le-line); }
+.le-input:focus { outline: 1px solid var(--le-accent); border-color: transparent; }
+.le-row { border-left: 2px solid var(--le-line); }
+.le-verdict-value { text-shadow: 0 0 12px currentColor; }
+
+/* live build-status readout */
+.sk-term { background: #070907; border: 1px solid var(--le-line);
+  border-radius: 0; padding: 1rem 1.1rem; font-size: .88rem; line-height: 1.7; }
+.sk-term-cmd { color: var(--le-accent); }
+.sk-term-body { white-space: pre-wrap; margin: .4rem 0 0; color: var(--le-ink); }
+.sk-term-body .k { color: var(--le-muted); }
+.sk-term-body .v-go { color: var(--le-go); font-weight: 700; }
+.sk-term-body .v-hold { color: var(--le-hold); font-weight: 700; }
+.sk-term-body .v-nogo { color: var(--le-nogo); font-weight: 700; }
+.sk-term-foot { color: var(--le-muted); margin: .5rem 0 0; }
+.sk-term-foot::before { content: "// "; }
+.le-banner { background: #050705; }
+.le-banner-dot { background: var(--le-accent); }
